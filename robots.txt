@@ -1,4 +1,4 @@
-user-Agent:*
-Allow: /
+User-agent: *
+Allow:/
 
 Sitemap: https://lottogen.netlify.app/sitemap.xml
