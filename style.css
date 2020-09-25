@@ -36,6 +36,19 @@ body {
 	font-size:1rem;
 }
 
+section p {
+	font-family:NanumSquareR;
+	color:#35465D;
+	text-align: justify;
+	text-justify: inter-word;
+	font-size:1rem;
+	padding:2.1% 7.7%;
+}
+
+.account {
+	margin-top: 50px;
+}
+
 .maincontent {
 	margin-top:50px;
 }
@@ -92,7 +105,7 @@ body {
 
 .footer div{
 	font-family:NanumSquareR;
-	color:#FFFFFF;
+	color:#35465D;
 	font-size:0.5rem;
 	text-align:center;
 	bottom:0;
