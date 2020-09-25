@@ -1,0 +1,4 @@
+user-Agent:*
+Allow: /
+
+Sitemap: https://lottogen.netlify.app/sitemap.xml
