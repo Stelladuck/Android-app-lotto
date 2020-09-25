@@ -84,3 +84,17 @@ body {
 	text-align:center;
 	margin-top:25px;
 }
+
+.footer {
+	font-family:NanumSquareR;
+	color:#35465D;
+	font-size:1rem;
+	text-align:center;
+	bottom:0;
+	position:absolute;
+}
+
+.ad-banner {
+	width:320px;
+	margin:0 auto;
+}
