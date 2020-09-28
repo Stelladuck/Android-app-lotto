@@ -1,128 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <title>연관규칙 로또번호 생성기</title>
+		<title>연관규칙 로또번호 생성기</title>
 
-        <!-- Bootstrap CSS -->
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-            crossorigin="anonymous"
-        />
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous" />
 
-        <link rel="stylesheet" href="style.css" /> 
-
-        <meta name="naver-site-verification" content="8475991f910aec55ce76a9c70b63fcb18da3946f" />
+		<!-- Verification -->
+		<meta name="naver-site-verification" content="8475991f910aec55ce76a9c70b63fcb18da3946f" />
 		<meta name="google-site-verification" content="w6GAVZMHZhgVibg5p8AdhUkmiM4rcoiHrGt8yNs5n1s" />
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light nav-distance">
-            <a class="navbar-brand" href="index.html">로또번호 생성기</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <!-- <li class="nav-item active">
+		
+		<!-- Style -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg fixed-top navbar-light nav-distance">
+			<a class="navbar-brand" href="index.html">로또번호 생성기</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNav"
+				aria-controls="navbarNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<!-- <li class="nav-item active">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="explain.html">어떻게 분석했나요?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="support.html">후원하고 싶으신가요?</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+					<li class="nav-item">
+						<a class="nav-link" href="explain.html">어떻게 분석했나요?</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="support.html">후원하고 싶으신가요?</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-        <section class="section">
-            <h1 class="title">연관규칙 로또번호 생성기</h1>
-            <h2 class="subtitle">이번주에 나올 가능성 있는 로또번호는?</h2>
-        </section>
+		<section class="section">
+			<h1 class="title">연관규칙 로또번호 생성기</h1>
+			<h2 class="subtitle">이번주에 나올 가능성 있는 로또번호는?</h2>
+		</section>
 
-        <div ng-app="csvApp" ng-controller="csvCtrl" class="maincontent">
-            <div ng-repeat="report in reports">
-                <table class="table table-striped report-list">
-                    <thead class="tablestyle">
-                        <tr>
-                            <th>로또번호 시퀀스</th>
-                        </tr>
-                    </thead>
-                    <tbody class="tablestyle">
-                        <tr ng-repeat="data in report.data">
-                            <td>{{ data.Fst }}</td>
-                        </tr>
-                        <tr ng-if="report.data.length === 0">
-                            <td colspan="1"><p class="lead text-center">Reloading...</p></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+		<div ng-app="csvApp" ng-controller="csvCtrl" class="maincontent">
+			<div ng-repeat="report in reports">
+				<table class="table table-striped report-list">
+					<thead class="tablestyle">
+						<tr>
+							<th>로또번호 시퀀스</th>
+						</tr>
+					</thead>
+					<tbody class="tablestyle">
+						<tr ng-repeat="data in report.data">
+							<td>{{ data.Fst }}</td>
+						</tr>
+						<tr ng-if="report.data.length === 0">
+							<td colspan="1"><p class="lead text-center">Reloading...</p></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 
-            <div class="buttonCenter">
-                <button class="resetbtn" onClick="window.location.reload()">다시 생성하기</button>
-            </div>
-        </div>
-		
-		<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f6dc42536c27ef8"></script> 
+			<div class="buttonCenter">
+				<button class="resetbtn" onClick="window.location.reload()">다시 생성하기</button>
+			</div>
+		</div>
 
-         <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_d01q"></div>  
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<script
+			type="text/javascript"
+			src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f6dc42536c27ef8"
+		></script>
+
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<div class="addthis_inline_share_toolbox_d01q"></div>
 
 		<!-- AdFit -->
-        <div class="ad-banner">
-            <ins
-                class="kakao_ad_area"
-                style="display: none;"
-                data-ad-unit="DAN-1k1wqc7m2ucth"
-                data-ad-width="320"
-                data-ad-height="100"
-            ></ins>
-        </div>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+		<div class="ad-banner">
+			<ins
+				class="kakao_ad_area"
+				style="display: none;"
+				data-ad-unit="DAN-1k1wqc7m2ucth"
+				data-ad-width="320"
+				data-ad-height="100"
+			></ins>
+		</div>
+		<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 
-        <!--<footer class="footer pt-5 container d-flex justify-content-center">
+		<footer class="footer pt-5 container d-flex justify-content-center">
             <div>
                 <p>
-                    &copy; 별덕 Stelladuck 2020. All Rights Reserved.
+                      <!-- &copy; 별덕 Stelladuck 2020. All Rights Reserved. -->
                 </p>
             </div>
-        </footer>-->
+        </footer>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script
-            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-            crossorigin="anonymous"
-        ></script>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+			crossorigin="anonymous"
+		></script>
 
-        <!-- Necessary -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
-        <script type="text/javascript" src="lottonum.js"></script>
-    </body>
+		<!-- Necessary Javascript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+		<script type="text/javascript" src="lottonum.js"></script>
+	</body>
 </html>
