@@ -16,7 +16,7 @@ body {
 .navbar-light .navbar-brand {
 	font-family:NanumSquareR;
 	color:#35465D;
-	font-size:1rem;
+	font-size:0.875rem;
 }
 
 .navbar-light .navbar-toggler {
@@ -25,20 +25,21 @@ body {
 
 .section {
 	margin-top: 100px;
+	margin-bottom: 24px;
 }
 
 .title {
 	font-family:NanumSquareR;
 	color:#35465D;
 	text-align:center;
-	font-size:2rem;
+	font-size:1.5rem;
 }
 
 .subtitle {
 	font-family:NanumSquareR;
 	color:#35465D;
 	text-align:center;
-	font-size:1rem;
+	font-size:0.875rem;
 }
 
 section p {
@@ -46,7 +47,7 @@ section p {
 	color:#35465D;
 	text-align: justify;
 	text-justify: inter-word;
-	font-size:1rem;
+	font-size:0.875rem;
 	padding:2.1% 7.7%;
 }
 
@@ -76,7 +77,7 @@ section p {
 .text-center {
 	font-family:NanumSquareR;
 	color:#35465D;
-	font-size:1rem;
+	font-size:0.875rem;
 }
 
 .buttonCenter{
@@ -110,7 +111,7 @@ section p {
 
 
 .footer div{
-	position: absolute;
+	/* position:absolute */
 	bottom: 0;
 	font-family:NanumSquareR;
 	color:#35465D;
