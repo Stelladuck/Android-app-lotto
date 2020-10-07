@@ -1086,6 +1086,11 @@ var scatterChart = new Chart(ctx, {
 			borderColor: 'rgb(79,213,223)',
 			backgroundColor: 'rgb(79,213,223,0.5)',
 			data:[{x:26,y:32}]
+		}, {
+			label: '빈도 03',
+			borderColor: 'rgb(71,218,227)',
+			backgroundColor: 'rgb(71,218,227,0.5)',
+			data:[]
 		}]
     },
     options: {
@@ -1097,7 +1102,8 @@ var scatterChart = new Chart(ctx, {
         },
 		title: {
             display: true,
-            text: 'Custom Chart Title'
+            text: '빈도 수에 따라 색을 다르게 한 도표',
+			fontSize: 11
         }
     }
 });
