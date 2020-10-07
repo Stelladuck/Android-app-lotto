@@ -23,6 +23,11 @@ body {
 	border-color:#FFFFFF;
 }
 
+.nav-link {
+	font-family:NanumSquareR;
+	font-size:0.875rem;
+}
+
 .section {
 	margin-top: 100px;
 	margin-bottom: 24px;
