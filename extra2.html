@@ -3,7 +3,7 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
-		<title>후원하고 싶으신가요?</title>
+		<title>다양한 통계: 두 숫자 통계</title>
 		<meta name="description" content="개발자 후원과 계좌정보" />
 		<meta name="author" content="Stelladuck" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -20,6 +20,9 @@
             integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
             crossorigin="anonymous"
         />
+		
+		<!-- JavaScript -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 		
 		<!-- Verification -->
 		<meta name="naver-site-verification" content="8475991f910aec55ce76a9c70b63fcb18da3946f" />
@@ -63,19 +66,16 @@
         </nav>
 
 		<section class="section">
-            <h1 class="title">후원하고 싶으신가요?</h1>
-            <h2 class="subtitle">후원은 개발자에게 의욕을 복돋워 줍니다!</h2>
-
-        </section>  
+            <h1 class="title">두 수 조합에는 패턴이 있을까요?</h1>
+            <h2 class="subtitle">가장 빈번한 숫자 10개와 낮은 수 10개</h2>
+        </section>
 		
-		<section class="account">
-			<h2 class="subtitle">
-				배고픈 물리학자의 계좌정보
-			</h2>
-			<h2 class="subtitle">
-				신한은행:110-243-157252 (대표자:이상훈)
-			</h2>
-		</section>
+		<!-- extra -->		
+		<div>
+			<canvas id="myChart1" width="200" height="200">
+			Text displayed if HTML5 is not supported.
+			</canvas>
+		</div>	
 		
 		<!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_d01q"></div>  
 
@@ -122,6 +122,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
         <script type="text/javascript" src="lottonum.js"></script>
+		<script type="text/javascript" defer src="chartpage2.js"></script>
     </body>
 
 </html>
