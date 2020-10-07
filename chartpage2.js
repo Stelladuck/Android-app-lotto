@@ -1076,6 +1076,16 @@ var scatterChart = new Chart(ctx, {
 				{x:37,y:44},
 				{x:8,y:26},
 				{x:11,y:40}]
+		}, {
+			label: '빈도 05',
+			borderColor: 'rgb(87,208,219)',
+			backgroundColor: 'rgb(87,208,219,0.5)',
+			data:[{x:22,y:41},{x:8,y:12}]
+		}, {
+			label: '빈도 04',
+			borderColor: 'rgb(79,213,223)',
+			backgroundColor: 'rgb(79,213,223,0.5)',
+			data:[{x:26,y:32}]
 		}]
     },
     options: {
@@ -1084,6 +1094,10 @@ var scatterChart = new Chart(ctx, {
                 type: 'linear',
                 position: 'bottom'
             }]
+        },
+		title: {
+            display: true,
+            text: 'Custom Chart Title'
         }
     }
 });
